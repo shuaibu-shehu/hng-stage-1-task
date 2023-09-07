@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+:root {
+  --clr-dark: #222f44;
+  --clr-light: #dde4ee;
+  --clr-link: #0a5adb;
+  --size-font: 1.3rem;
+  --size-sm: 2rem;
+  --size-l: 3rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--clr-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  color: var(--clr-light);
+}
+h1 {
+  text-transform: capitalize;
+  font-size: var(--size-l);
+}
+img {
+  width: 200px;
+  border-radius: 50%;
+}
+h3 {
+  text-transform: capitalize;
+  font-size: var(--size-l);
+}
+
+.clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+  position: relative;
+  width: 100px;
+}
+h2 span {
+  /* width: 4.5rem; */
+  position: relative;
+  margin: 1px;
+}
+.hrs{
+  color: #0a5adb;
+}
+.mins{
+  color: #cecbd8;
+}
+.secs{
+  color: #511196;
+}
+.hrs::after,
+.mins::after {
+  content: ":";
+  position: absolute;
+  top: -2px;
+  opacity: 0;
+  animation: blink 1s ease-in-out infinite;
+}
+.hrs::after {
+  left: 17px;
+ 
+}
+.mins::after {
+  left: 29px;
+}
+
+.ampm {
+  font-size: 0.8rem;
+  color: #0fe300;
+  font-weight: 800;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+a {
+  text-decoration: none;
+  color: var(--clr-link);
+  font-size: var(--size-font);
+  font-weight: 600;
+}
+a span {
+  color: var(--clr-light);
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: var(--size-sm);
+  }
+  img {
+    width: 180px;
+  }
+
+  h3 {
+    font-size: var(--size-sm);
+  }
+}
