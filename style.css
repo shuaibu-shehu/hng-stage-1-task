@@ -29,7 +29,6 @@ body {
 }
 /* name */
 h1 {
-  text-transform: capitalize;
   font-size: var(--size-l);
 }
 
@@ -39,7 +38,6 @@ img {
   border-radius: 50%;
 }
 h3 {
-  text-transform: capitalize;
   font-size: var(--size-l);
 }
 
