@@ -30,5 +30,5 @@ setInterval(() => {
     date.getUTCMilliseconds()
   );
 
-  document.querySelector('[data-testid="currentUTCTime"]').textContent=utcMilliseconds;
+  document.querySelector('[data-testid="currentUTCTime"]').textContent=utcMilliseconds.toLocaleString();
 }, 1000);
