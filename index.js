@@ -18,9 +18,9 @@ dayOFTheWeek.textContent = currentDay;
 
 function getTime() {
   date = new Date();
-  const hrs = date.getHours();
-  const mins = date.getMinutes();
-  const secs = date.getSeconds();
+  const hrs = date.getUTCHours();
+  const mins = date.getUTCMinutes();
+  const secs = date.getUTCSeconds();
   const ampm =document.querySelector(".ampm");
   if(hrs>12){
     hrs=hrs-12;
