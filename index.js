@@ -1,6 +1,7 @@
 const dayOFTheWeek = document.querySelector(
   '[data-testid="currentDayOfTheWeek"]'
 );
+
 const daysOFtheWeek = [
   "Sunday",
   "Monday",
@@ -20,7 +21,7 @@ function getTime() {
   const hrs = date.getHours();
   const mins = date.getMinutes();
   const secs = date.getSeconds();
-  let ampm = (document.querySelector(".ampm").innerHTML = "AM");
+  const ampm =document.querySelector(".ampm");
   if(hrs>12){
     hrs=hrs-12;
   }else if(hrs>=12){
@@ -28,11 +29,17 @@ function getTime() {
   } else{
     ampm.innerHTML='AM';
   }
-  document.querySelector(".hrs").innerHTML = hrs;
-  document.querySelector(".mins").innerHTML = mins;
-  document.querySelector(".secs").innerHTML = secs;
+  
+  document.querySelector(".hrs").textContent = formatToTwoDigits(hrs);
+  document.querySelector(".mins").textContent= formatToTwoDigits(mins);
+  document.querySelector(".secs").textContent = formatToTwoDigits(secs);
 }
 
 setInterval(() => {
   getTime();
 }, 1000);
+
+// converts to two digits
+function formatToTwoDigits(number) {
+    return number.toString().padStart(2, '0');
+}

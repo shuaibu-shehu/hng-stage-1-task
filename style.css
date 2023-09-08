@@ -3,7 +3,7 @@
 :root {
   --clr-dark: #222f44;
   --clr-light: #dde4ee;
-  --clr-link: #0a5adb;
+  --clr-link: #0945a4;
   --size-font: 1.3rem;
   --size-sm: 2rem;
   --size-l: 3rem;
@@ -27,10 +27,13 @@ body {
   font-family: "Poppins", sans-serif;
   color: var(--clr-light);
 }
+/* name */
 h1 {
   text-transform: capitalize;
   font-size: var(--size-l);
 }
+
+/* image */
 img {
   width: 200px;
   border-radius: 50%;
@@ -40,22 +43,33 @@ h3 {
   font-size: var(--size-l);
 }
 
+/* clock */
 .clock-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 3px;
 }
+
 h2 {
+ 
+  width: 140px;
+  display: flex;
   position: relative;
-  width: 100px;
+  border-radius: 5px;
+ 
+ 
 }
 h2 span {
-  /* width: 4.5rem; */
   position: relative;
-  margin: 1px;
+  margin: 4px;
 }
 .hrs{
   color: #0a5adb;
+  min-width: 40px;
 }
 .mins{
   color: #cecbd8;
@@ -63,45 +77,46 @@ h2 span {
 .secs{
   color: #511196;
 }
-.hrs::after,
-.mins::after {
-  content: ":";
-  position: absolute;
+
+.blink{
+  position: relative;
   top: -2px;
-  opacity: 0;
-  animation: blink 1s ease-in-out infinite;
+  animation: blink 1s  ease infinite ;
 }
-.hrs::after {
-  left: 17px;
- 
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-.mins::after {
-  left: 29px;
-}
+
 
 .ampm {
   font-size: 0.8rem;
   color: #0fe300;
   font-weight: 800;
+  margin: 5px;
 }
 
-@keyframes blink {
-  0%,
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+/* link */
 a {
   text-decoration: none;
   color: var(--clr-link);
   font-size: var(--size-font);
   font-weight: 600;
+  transition: all 0.3s;
 }
 a span {
   color: var(--clr-light);
+}
+a:hover{
+  color: #111876;
 }
 
 @media (max-width: 400px) {
