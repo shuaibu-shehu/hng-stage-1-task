@@ -24,12 +24,12 @@ function getTime() {
   let ampm =document.querySelector(".ampm");
 
   if(hrs>=12){
-    ampm.innerHTML='PM';
+    ampm.textContent='PM';
   }
   if(hrs>12){
     hrs=hrs-12;
   } else{
-    ampm.innerHTML='AM';
+    ampm.textContent='AM';
   }
   
   document.querySelector(".hrs").textContent = formatToTwoDigits(hrs);
