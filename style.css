@@ -43,46 +43,6 @@ h3 {
   font-size: var(--size-l);
 }
 
-/* clock */
-.clock-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border: 1px solid;
-  border-radius: 5px;
-  padding: 3px;
-}
-
-h2 {
- 
-  width: 140px;
-  display: flex;
-  position: relative;
-  border-radius: 5px;
- 
- 
-}
-h2 span {
-  position: relative;
-  margin: 4px;
-}
-.hrs{
-  color: #0a5adb;
-  min-width: 40px;
-}
-.mins{
-  color: #cecbd8;
-}
-.secs{
-  color: #511196;
-}
-
-.blink{
-  position: relative;
-  top: -2px;
-  animation: blink 1s  ease infinite ;
-}
 
 @keyframes blink {
   0% {
@@ -94,14 +54,6 @@ h2 span {
   100% {
     opacity: 0;
   }
-}
-
-
-.ampm {
-  font-size: 0.8rem;
-  color: #0fe300;
-  font-weight: 800;
-  margin: 5px;
 }
 
 /* link */
