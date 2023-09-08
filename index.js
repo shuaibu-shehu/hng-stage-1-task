@@ -17,7 +17,7 @@ const currentDay = daysOFtheWeek[date.getUTCDay()];
 dayOFTheWeek.textContent = currentDay;
 
 
-
+// current utc time
 setInterval(() => {
   date = new Date();
   const utcMilliseconds = Date.UTC(
