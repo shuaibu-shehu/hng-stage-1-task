@@ -18,14 +18,16 @@ dayOFTheWeek.textContent = currentDay;
 
 function getTime() {
   date = new Date();
-  const hrs = date.getUTCHours();
-  const mins = date.getUTCMinutes();
-  const secs = date.getUTCSeconds();
-  const ampm =document.querySelector(".ampm");
+  let hrs = date.getUTCHours();
+  let mins = date.getUTCMinutes();
+  let secs = date.getUTCSeconds();
+  let ampm =document.querySelector(".ampm");
+
+  if(hrs>=12){
+    ampm.innerHTML='PM';
+  }
   if(hrs>12){
     hrs=hrs-12;
-  }else if(hrs>=12){
-    ampm.innerHTML='PM';
   } else{
     ampm.innerHTML='AM';
   }
